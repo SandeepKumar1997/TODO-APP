@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1 class="title">todos</h1>
+    <div class="searcharea">
+      <input class="search-area" type="text" placeholder="Search ..." />
+    </div>
+    <div class="todo-list">
+      <div class="new-task-creator">
+        <form action="" data-form-area>
+          <input
+            type="text"
+            class="new-list"
+            placeholder="What needs to be done ?"
+            aria-label="new task entry"
+            data-input-area
+          />
+        </form>
+      </div>
+      <div class="todo-body">
+        <div class="tasks" data-tasks></div>
+      </div>
+
+      <div class="todo-footer">
+        <div class="task-count"></div>
+        <div class="todo-filters">
+          <button class="btn-all" aria-label="all items in todo list">
+            All
+          </button>
+          <button class="btn-active" aria-label="all active items in todo list">
+            Active
+          </button>
+
+          <button
+            class="btn-complete"
+            aria-label="all completed items in todo list"
+          >
+            Completed
+          </button>
+        </div>
+      </div>
+    </div>
+    <template id="todo-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label><span class="custom-checkbox"></span></label>
+        <button type="button" class="btn-delete">X</button>
+      </div>
+    </template>
+  </body>
+</html>
